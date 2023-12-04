@@ -1,0 +1,20 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    /* max-width: 1180px;*/
+     min-width: 320px;
+     width: 100%;
+     color: $text-black;
+     font-size: 15px;
+     font-family: 'TTLakes-Regular', sans-serif;
+     overflow-x: hidden;
+     margin: auto;
+     background-color: $main-background;
+ }
+ 
+ .wrapper {
+     min-height: 100vh;
+ }
+

@@ -1,0 +1,87 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background-color: $background;
+    border-bottom: 2px solid $border-blue;
+    width: 100%;
+    min-width: 320px;
+    padding: 20px 16px;
+}
+/*Hidden logo divider*/
+.header__logo-divider {
+    display: none;
+}
+.header__divider {
+    height: 34px;
+    width: 3px;
+    margin-right: 15px;
+    background-color: $border-grey;
+}
+.header__logo {
+    margin-left: 10px;
+}
+.header__buttons {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    justify-content: flex-end;
+    min-width: 100px;
+}
+.header__selection-buttons-cover {
+    display: flex;
+    align-items: center; 
+}
+.header__selection-buttons {
+    display: none;
+}
+ /*Hidden buttons 768px screen*/
+.selection-buttons__item {
+    margin-right: 15px;
+}
+/*Visible buttons for 320px*/
+.header__button_first {
+    margin-right: 15px;
+}
+/*Hidden text 1120px screen*/
+.button-cover {
+    display: flex;
+    align-items: center;
+}
+.hidden-text {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header {
+        z-index: 50;
+    }
+   .header__logo-divider {
+        display: flex;
+        margin-left: 13px;
+    }
+    .header__selection-buttons {
+        display: flex;
+    }
+    .header__separator {
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        position: relative;
+   }
+    .hidden-text {
+        display: inline;
+        font-weight: 560;
+    }
+    .header {
+        display: none;
+    } 
+}

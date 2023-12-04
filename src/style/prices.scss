@@ -1,0 +1,120 @@
+.content-table {
+    display: none;
+}
+.content-table__title {
+    display: flex;
+    padding: 16px 20px;
+    color: $text-grey;
+    font-weight: 500;
+    width: 100%;
+}
+.content-table__services {
+   margin-right: 30px;
+   width: 50%;
+}
+p {
+  font-family: 'TT Lakes Regular', sans-serif;
+}
+ .content-table__price {
+    width: 20%;
+    margin-right: 16px;
+}
+.content-table__term {
+    margin-right: 16px;
+    width: 20%;
+}
+.content-table__block {
+    margin: 0 16px;
+    border-radius: 7px;
+    padding: 16px 24px;
+    background-color: $background;
+}
+.content-table__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+.content-table__line:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-top: 60px;
+    background-color: $border-grey;
+    height: 2px;
+    width: 100%;
+}
+.content-table__line:last-child {
+    margin-bottom: 3px;
+}
+.content-table__order {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 120px;
+    color: $background;
+}
+.order-button {
+    color: $background;
+    font-size: 16px;
+    background-color: $text-pink;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    padding: 5px 18px;
+    border-radius: 16px;
+}
+.order-button:hover {
+    background-color: $button-hover;
+}
+.order-button__text {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8rem;
+    color: $background;
+}
+.order-button__icon {
+    margin-right: 6px;
+    display: inline-flex;
+}
+
+.price-text {
+    padding: 0 16px;
+    margin-top: 20px;
+    
+}
+ .price-offer {
+    padding: 0 16px;
+    margin-top: 16px;
+ }
+ a:hover {
+    color:$link-hover;
+ }
+ a {
+    text-decoration: none;
+    color: $text-black;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'TT Lakes Medium', sans-serif;;
+ }
+ .line-icon {
+    margin-left: 10px;
+ }
+
+ @media (min-width: 768px) {
+    .content-table-cover {
+        padding: 20px 0 30px;
+    }
+    .content-table {
+        display: block;
+    }
+ }
+
+ @media (min-width: 1440px) {
+    .content-table-cover {
+        padding: 20px 0 45px;
+    }
+ }

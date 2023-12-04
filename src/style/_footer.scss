@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin-top: 20px;
+    background: $main-background;
+    border-top: 2px solid $border-blue;
+    width: 100%;
+ }
+ .footer-title {
+    color: $text-grey;
+    font-weight: 500;
+    font-size: 80%;
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1rem;
+ }
+
+ @media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-title {
+        margin-bottom: 0;
+        width: 40%;
+    }
+ }

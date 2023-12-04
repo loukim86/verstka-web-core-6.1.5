@@ -1,0 +1,115 @@
+.content-title {
+    background: linear-gradient(90deg,$main-background, $background);
+    padding: 16px;
+    border-top: 2px solid $border-blue; 
+}
+.content-text {
+    color: $text-grey;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 24px;
+    font-size: 10px;
+    font-family: 'TT Lakes Regular', sans-serif;
+}
+.content-brands {
+    display: none;
+    margin: 16px;
+}
+.brands-item {
+    border: none;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    min-width: 240px;
+    min-height: 72px;
+}
+button.brands-item {
+    padding: 0;
+}
+.brands-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.outer-cover {
+    display: flex;
+}
+.outer-cover {
+    padding: 20px 0 10px;
+}
+.brands-item:nth-child(n + 9) {
+    display: none;
+}
+.swiper-wrapper {
+    padding: 0 35px;
+    margin-bottom: 35px;
+    margin-left: 11px;
+}
+
+.swiper-pagination-bullet {
+    background: $swiper-bullet;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    margin: 30px 10px;
+}
+.swiper-pagination-bullet-active {
+    background-color: $swiper-bullet-active !important;
+}
+.show-more__button {
+    display: none;
+}
+.toggle-button {
+    margin-top: 8px;
+    border: none;
+    background-color: $main-background;
+    font-family: 'TT Lakes Regular', sans-serif;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+   .show-more__button {
+        display: flex;
+        margin-left: 25px;
+    }
+    .outer-cover {
+        display: none;
+    }
+    .content-brands {
+        display: block;
+        margin: 16px;
+    }
+    .content-brands__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr min-content;
+        grid-gap: 10px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .content-title {
+        background: linear-gradient(90deg, $main-background, $background);
+        padding: 20px;
+        border-top: 2px solid $border-blue; 
+    }
+    .content-text {
+        color: $text-grey;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-left: 20px;
+        padding: 0 20px;
+        font-size: 10px;
+    }
+    .content-brands__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr min-content;
+        grid-gap: 10px;
+    }
+    .show-more__button {
+        display: flex;
+        margin-left: 25px;
+    }
+}
