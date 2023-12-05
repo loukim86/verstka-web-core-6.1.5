@@ -7,9 +7,9 @@ hideShowButoon.addEventListener('click', function () {
     isTextHidden = !isTextHidden;
     hideShowText.forEach(text => {
         if (isTextHidden) {
-            text.style.opacity = '0';
+            text.style.display = 'none';
         } else {
-            text.style.opacity = '1';
+            text.style.display = 'block';
         }
     });
     hideShowButoon.textContent = isTextHidden ? 'Читать дальше' :  'Скрыть';

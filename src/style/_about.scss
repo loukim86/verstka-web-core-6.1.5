@@ -13,18 +13,17 @@
     margin-bottom: 20px;  
     font-family: 'TT Lakes Regular', sans-serif;
     font-weight: 600;
-    line-height: 1rem;
+    line-height: 1.5rem;
 }
 p {
     margin: 0;
     padding: 0;
 }
 .content-text-hidden {
-    opacity: 0;
+    display: none;
 }
 .content-text__moving {
     display: flex;
-    margin-bottom: 60px;
     margin-right: 100px;
 }
 .read-more {
@@ -61,7 +60,7 @@ p {
         padding: 0;
     }
     .content-text__moving {
-        margin-bottom: 20px;
+        margin-bottom: 60px;
         display: flex;
     }
     button {
@@ -73,12 +72,18 @@ p {
     }
 }
 
+@media (min-width: 860px) and (max-width: 1439px) {
+    .content-text__moving {
+        margin-bottom: 180px;
+    }
+}
+
 @media (min-width: 1440px) {
      .content-text-covering {
         width: auto;
         padding-top: 24px;
         padding-bottom: 45px;
-         overflow-x: hidden;
+        overflow-x: hidden;
     }
     .content-text {
        padding: 0 30px;
@@ -90,6 +95,6 @@ p {
         margin-right: 30px;
     }
     .content-text__moving {
-        margin-bottom: 95px;
+        margin-bottom: 180px;
     }
 }

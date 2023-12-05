@@ -5,11 +5,9 @@ import 'swiper/css/bundle';
 const mySwiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: 'true',
-    slidesPerView: 1,
-    centeredSlides: false,
-    spaceBetween: 20,
-    pagination: {
-        el: ".swiper-pagination",
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
     },
     breakpoints: {
         320: {

@@ -2,86 +2,50 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 document.addEventListener('DOMContentLoaded', function() {
-    const brandsItems = document.querySelectorAll('.content-brands__items .brands-item');
+    const brandsItem = document.querySelectorAll('.content-brands__items .brands-item img');
     const swiperWrapper = document.querySelector('.brands__swiper-wrapper');
+   
 
-    brandsItems.forEach((item) => {
-        const clonedItem = document.createElement('div');
-        clonedItem.classList.add('swiper-slide');
-        clonedItem.innerHTML = item.innerHTML;
-        swiperWrapper.appendChild(clonedItem);
+    brandsItem.forEach(function(img) {
+        const newSlide = document.createElement('div');
+        newSlide.classList.add('swiper-slide', 'brand-slide');
+
+        const newImage = document.createElement('div');
+        newImage.classList.add('slider-image');
+
+        const imgSrc = img.cloneNode(true);
+        newImage.appendChild(imgSrc);
+        newSlide.appendChild(newImage);
+        swiperWrapper.appendChild(newSlide);
+
     });
 });
 
-const mySwiper = new Swiper('.swiper', {
+    new Swiper('.brands__swiper', {
     direction: 'horizontal',
     loop: 'true',
-    slidesPerView: 1,
-    centeredSlides: false,
-    spaceBetween: 0,
-    pagination: {
-        el: ".swiper-pagination",
-    },
+    scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+},
     breakpoints: {
         320: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             centeredSlides: true,
             loop: true,
-            spaceBetween: 10,  
+            spaceBetween: 5,  
         },
         480: {
             slidesPerView: 2,
             centeredSlides: true,
             loop: true,
-            spaceBetween: 16,
+            spaceBetween: 10,
         },
         640: {
             slidesPerView: 3,
-            centeredSlides: true,
+            centeredSlides: false,
             loop: true,
             spaceBetween: 20,
         },
     }
 });
-/*let swiper = null;
-
-function checkScreenWidth() {
-    if (window.innerWidth <= 767 && swiper === null) {
-    swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
-        loop: true,
-        spaceBetween: 0,
-        pagination: {
-            el: '.swiper-pagination',
-          },
-          breakpoints: {
-            320: {
-                slidesPerView: 1,
-                centeredSlides: true,
-                loop: true,
-                spaceBetween: 0,  
-            },
-            480: {
-                slidesPerView: 2,
-                centeredSlides: true,
-                loop: true,
-                spaceBetween: 0,
-            },
-            640: {
-                slidesPerView: 2,
-                centeredSlides: true,
-                loop: true,
-                spaceBetween: 20,
-            },
-        }
-    });
-
-} else if (window.innerWidth > 767 && swiper !== null) {
-    swiper.destroy();
-    swiper = null;
-}
-}
-
-checkScreenWidth();
-window.addEventListener('resize',checkScreenWidth);
-*/

@@ -41,17 +41,17 @@ button.brands-item {
 .brands-item:nth-child(n + 9) {
     display: none;
 }
-.swiper-wrapper {
-    padding: 0 35px;
-    margin-bottom: 35px;
-    margin-left: 11px;
+.swiper-pagination {
+    position: absolute !important;
+    text-align: center !important;
+    transition: 300ms opacity !important;
+    transform: translate3d(0, 0, 0) !important;
 }
-
 .swiper-pagination-bullet {
-    background: $swiper-bullet;
-    width: 10px;
-    height: 10px;
-    opacity: 1;
+    background: $swiper-bullet !important;
+    width: 10px !important;
+    height: 10px !important;
+    opacity: 1 !important;
     margin: 30px 10px;
 }
 .swiper-pagination-bullet-active {
